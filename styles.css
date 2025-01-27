@@ -1,0 +1,29 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Change to row */
+  align-items: center; /* Align items at the top */
+  flex-wrap: wrap; /* Allow wrapping if there are too many containers */
+  gap: 20px; /* Add space between rows and containers */
+}
+
+.add-new-btn {
+  margin: 10px;
+}
+
+.rating {
+  width: 147px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* Space between label and input */
+  border: 1px solid #ccc; /* Optional: Add a border to see boundaries */
+  border-radius: 5px;
+  width: 150px; /* Give a fixed width to keep consistency */
+}
+

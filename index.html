@@ -3,30 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Library</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h4>Library</h4>
-  <label>Book Name</label>
-  <input type="text" id="book-input" placeholder="Book name">
+  <main class="main-container">
 
-  <label>Author</label>
-  <input type="text" id="author-input" placeholder="Author name">
+    <h4>Library</h4>
 
-  <label>Rating</label>
-  <select>
-    <option value="" disabled selected>Select your rating</option>
-    <option>1/5</option>
-    <option>2/5</option>
-    <option>3/5</option>
-    <option>4/5</option>
-    <option>5/5</option>
-  </select>
+    <div class="container">
+      <label>Book Name</label>
+      <input type="text" id="book-input" placeholder="Book name">
+    </div>
 
-  <button id="add-new-book">Add</button>
+    <div class="container">
+      <label>Author</label>
+      <input type="text" id="author-input" placeholder="Author name">
+    </div>
 
-  <p>Show Your Books Collection</p>
-  <button id="show-library">Show Library</button>
+    <div class="container">
+      <label>Rating</label>
+      <select class="rating">
+        <option value="" disabled selected>Select your rating</option>
+        <option>1/5</option>
+        <option>2/5</option>
+        <option>3/5</option>
+        <option>4/5</option>
+        <option>5/5</option>
+      </select>
+    </div>
+
+    <div class="container-add-new-book-btn">
+      <button id="add-new-book" class="add-new-btn">Add</button>
+    </div>
+
+    <div class="container-show-library">
+      <p>Show Your Books Collection</p>
+      <button id="show-library">Show Library</button>
+    </div>
+
+    <p id="show-library-output"></p>
+  </main>
+
+  <script src="index.js"></script>
 </body>
 </html>
