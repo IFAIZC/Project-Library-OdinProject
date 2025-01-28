@@ -1,3 +1,13 @@
+// create a object constructor
+function Book(bookName, authorName, ratingTotal) {
+  this.bookName = bookName
+  this.authorName = authorName;
+  this.ratingTotal = ratingTotal;
+};
+
+// Array to store all books
+const bookCollection = [];
+
 // create a function, that takes user's input value and save it under objects.
 function storingUserInput() {
   const bookName = document.getElementById("book-input").value;
@@ -5,7 +15,7 @@ function storingUserInput() {
   const ratingTotal = document.getElementById("rating-input").value;
   
   // Create a new Book object (object constructor) **TO STUDY**
-  const newBook = new book(bookName, authorName, ratingTotal);
+  const newBook = new Book(bookName, authorName, ratingTotal);
 
   // // Add the new Book object to the book collection **TO STUDY**
   bookCollection.push(newBook);
@@ -21,21 +31,24 @@ document.getElementById("add-new-book").addEventListener("click", storingUserInp
 
 
 
-// create a object constructor ***(REFER CHATGPT TO UNDERSTAND EACH CODE)***
-function book() {
 
-};
+// Function to display all books in the book collection
+function displayBooks() {
+  const outputElement = document.getElementById("show-library-output");
+  outputElement.innerHTML = ""; // Clear previous content
 
+  bookCollection.forEach((book, index) => {
+    const bookDetails = `
+      <div>
+        <strong>Book #${index + 1}</strong><br>
+        <em>Title:</em> ${book.bookName}<br>
+        <em>Author:</em> ${book.authorName}<br>
+        <em>Rating:</em> ${book.ratingTotal}<br>
+        <hr>
+      </div>
+    `;
+    outputElement.innerHTML += bookDetails;
+  });
+}
 
-
-
-
-
-
-
-
-
-// create another function, that takes from objects and show it under "show-library-output" 
-
-// ***Keep in mind*** needs to use "this" & "new" 
-// to create a template when user put thier input, and those will go under object constructor.
+document.getElementById("show-library").addEventListener("click", displayBooks)
