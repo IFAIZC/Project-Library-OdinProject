@@ -27,3 +27,16 @@
   width: 150px; /* Give a fixed width to keep consistency */
 }
 
+.container-show-library {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-library {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}

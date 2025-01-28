@@ -14,10 +14,10 @@ function storingUserInput() {
   const authorName = document.getElementById("author-input").value;
   const ratingTotal = document.getElementById("rating-input").value;
   
-  // Create a new Book object (object constructor) **TO STUDY**
+  // Create a new Book object , it will run through the Book constructor above and then go to bookCollection to store in an array.
   const newBook = new Book(bookName, authorName, ratingTotal);
 
-  // // Add the new Book object to the book collection **TO STUDY**
+  // // Add the new Book object to the book collection
   bookCollection.push(newBook);
 
   // Clear input fields for the next entry
@@ -28,8 +28,6 @@ function storingUserInput() {
 
 // when user clicks "add" button, it will run and store user's input and store those inputs on newBook... which is linked to Book (object constructor). here we use "new" since this is a new object that we will store in the book section.
 document.getElementById("add-new-book").addEventListener("click", storingUserInput)
-
-
 
 
 // Function to display all books in the book collection
